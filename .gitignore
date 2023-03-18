@@ -1,0 +1,15 @@
+# Visual Studio files
+.vs/
+**/obj/*
+**/bin/*
+*.suo
+*.*sdf
+*.user
+*.swp
+*.bak
+*.lnk
+*.tmp_proj
+
+# NuGet
+[Pp]ackages/
+NuGet.Config

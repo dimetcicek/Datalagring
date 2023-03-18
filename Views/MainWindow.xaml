@@ -1,0 +1,24 @@
+﻿<Window
+    x:Class="Datalagring.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:Datalagring.ViewModels"
+    xmlns:views="clr-namespace:Datalagring.Views"
+    Title="MainWindow"
+    d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel,
+                                     IsDesignTimeCreatable=True}"
+    WindowState="Maximized"
+    mc:Ignorable="d">
+    <ContentPresenter Content="{Binding CurrentViewModel}">
+        <ContentPresenter.Resources>
+            <DataTemplate DataType="{x:Type viewModels:CreateTicketViewModel}">
+                <views:CreateTicketView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:MainViewModel}">
+                <views:MainView />
+            </DataTemplate>
+        </ContentPresenter.Resources>
+    </ContentPresenter>
+</Window>
